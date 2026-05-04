@@ -88,12 +88,12 @@ public class PlayerInteractor : MonoBehaviour
             }
 
         }
-
-        objectInteracting.interactionID = interaction.nextInteractionID;
-        if(objectInteracting.interactionID == interaction.nextInteractionID)
+        if (objectInteracting.interactionID == interaction.nextInteractionID)
         {
             interaction.playNextInteractionInstantly = false;
         }
+        objectInteracting.interactionID = interaction.nextInteractionID;
+
 
         CursorController.Instance.InteractAnim();
 
