@@ -143,6 +143,10 @@ public class PlayerInteractor : MonoBehaviour
             case InteractionType.teleportPlayer:
                 PlayerController.Instance.transform.position = InteractiveObjectFromName(interaction.stringArg).transform.position;
                 break;
+            case InteractionType.chronoStarted:
+                Timer.Instance.ChronoStart();
+                Debug.Log("ChronoStarted");
+                break;
         }
 
         StartCoroutine(InteractionCoroutine());
