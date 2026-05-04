@@ -145,7 +145,6 @@ public class PlayerInteractor : MonoBehaviour
                 break;
             case InteractionType.chronoStarted:
                 Timer.Instance.ChronoStart();
-                Debug.Log("ChronoStarted");
                 break;
         }
 

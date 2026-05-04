@@ -36,8 +36,14 @@ public class Timer : MonoBehaviour
 
     public void ChronoStart()
     {
-        Debug.Log("FunctionCall");
         second = maxtime;
+
+        System.TimeSpan time = System.TimeSpan.FromSeconds(second);
+
+        string formatted = time.ToString(@"mm\:ss");
+
+        textChrono.text = formatted;
+
         timer.SetActive(true);
         timerstarted = true;
         timerCoroutine = StartCoroutine(Chronometers());
@@ -47,8 +53,14 @@ public class Timer : MonoBehaviour
         while (timerstarted)
         {
             yield return new WaitForSeconds(1);
+
             second--;
-            textChrono.text = second.ToString();
+
+            System.TimeSpan time = System.TimeSpan.FromSeconds(second);
+
+            string formatted = time.ToString(@"mm\:ss");
+
+            textChrono.text = formatted;
 
             if (second <= 0)
             {
