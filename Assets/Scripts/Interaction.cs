@@ -28,5 +28,6 @@ public enum InteractionType
     setCheckpoint,
     killPlayer,
     teleportPlayer,
-    chronoStarted
+    chronoStarted,
+    ennemyFollowing
 }

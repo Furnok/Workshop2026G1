@@ -146,6 +146,10 @@ public class PlayerInteractor : MonoBehaviour
             case InteractionType.chronoStarted:
                 Timer.Instance.ChronoStart();
                 break;
+            case InteractionType.ennemyFollowing:
+                AI_NavMeshAgent.Instance.EnnemyFollowing();
+                break;
+
         }
 
         StartCoroutine(InteractionCoroutine());
