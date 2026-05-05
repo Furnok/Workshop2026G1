@@ -190,6 +190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1256943713025599458}
+  - component: {fileID: 7473098293085869315}
   - component: {fileID: 8047920169244237919}
   - component: {fileID: 689202260272876842}
   m_Layer: 0
@@ -207,7 +208,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6796358612747199607}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -215,6 +216,30 @@ Transform:
   - {fileID: 6747101090456558962}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7473098293085869315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6796358612747199607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65bef3d57d1f42f45bc27bd25b427d69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ennemy_Perception
+  nose: {fileID: 2234885644180289284}
+  player:
+    serializedVersion: 2
+    m_Bits: 8
+  obstacle:
+    serializedVersion: 2
+    m_Bits: 64
+  viewrange: 12
+  viewangle: 70
+  viewradius: 0.5
+  targetoffset: 1.2
+  coneArcSegment: 16
 --- !u!114 &8047920169244237919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,7 +254,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AI_NavMeshAgent
   player: {fileID: 0}
   ai_NavMeshAgent: {fileID: 689202260272876842}
-  isfollowing: 1
+  ennemy_Perception: {fileID: 7473098293085869315}
+  timelosingtarget: 2
+  isfollowing: 0
+  ispatroling: 0
 --- !u!195 &689202260272876842
 NavMeshAgent:
   m_ObjectHideFlags: 0
