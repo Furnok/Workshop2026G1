@@ -112,4 +112,4 @@ InitTestScene*.unity*
 # Custom Unity
 
 # Ignore Packages Local
-ProjectSettings/Packages/
+/ProjectSettings/Packages/
