@@ -52,6 +52,8 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public bool running;
     public bool applyingRunForce;
+    public int jumpMax = 2;
+    private int jumpNumber = 1;
 
     public void PlayerControlUpdate()
     {
@@ -225,7 +227,7 @@ public class PlayerController : MonoBehaviour
  
         //touchingGround = Physics.BoxCast(transform.position + (transform.up * botRayHeight), Vector3.one * botRaySize / 2f, -transform.up, Quaternion.identity, botRaySize, ~ignoredLayer); ;
 
-        if(touchingGround)
+        if(touchingGround || jumpNumber < jumpMax)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -241,6 +243,7 @@ public class PlayerController : MonoBehaviour
         //jump direction
         jumpDirection = vel;
 
+        jumpNumber++;
     }
 
     void GroundUpdate()
@@ -264,6 +267,7 @@ public class PlayerController : MonoBehaviour
             if(Physics.Raycast(rays[i], botRaySize, ~ignoredLayer))
             {
                 touchingGround = true;
+                jumpNumber = 1;
             }
         }
 
