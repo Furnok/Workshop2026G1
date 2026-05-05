@@ -3193,6 +3193,7 @@ MonoBehaviour:
   vel: {x: 0, y: 0, z: 0}
   running: 0
   applyingRunForce: 0
+  jumpMax: 2
 --- !u!114 &681691762
 MonoBehaviour:
   m_ObjectHideFlags: 0
