@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,8 @@ public class PlayerController : MonoBehaviour
     public bool moving;
     public bool readyToRun;
 
+    [SerializeField] float speedMax = 4;
+    [SerializeField] float speedCrouch = 2;
     [SerializeField] float speed;
     [SerializeField] float acc;
     [SerializeField] float runForce;
@@ -51,6 +54,7 @@ public class PlayerController : MonoBehaviour
     public Vector3 vel;
     [HideInInspector]
     public bool running;
+    public bool crouching;
     public bool applyingRunForce;
     public int jumpMax = 2;
     private int jumpNumber = 1;
@@ -149,22 +153,52 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        {
+            if (!crouching)
+            {
+                crouching = true;
+                StartCrouching();
+            }
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftAlt))
+        {
+            if (crouching)
+            {
+                crouching = false;
+                StopCrouching();
+            }
+        }
+
         input = input.normalized;
 
         smoothedInput = Vector2.SmoothDamp(smoothedInput, input, ref inputVelocity, acc, 999f, Time.deltaTime);
-
     }
 
     void StartRunning()
     {
         readyToRun = false;
         running = true;
-
     }
 
     void StopRunning()
     {
         running = false;
+    }
+
+    void StartCrouching()
+    {
+        speed = speedCrouch;
+        cameraLookerTransform.DOKill();
+        cameraLookerTransform.DOMoveY(0.5f, 0.3f).SetEase(Ease.OutSine);
+    }
+
+    void StopCrouching()
+    {
+        speed = speedMax;
+        cameraLookerTransform.DOKill();
+        cameraLookerTransform.DOMoveY(1.5f, 0.3f).SetEase(Ease.OutSine);
     }
 
     public void MoveUpdate()
