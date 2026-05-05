@@ -149,6 +149,9 @@ public class PlayerInteractor : MonoBehaviour
             case InteractionType.ennemyFollowing:
                 AI_NavMeshAgent.Instance.EnnemyFollowing();
                 break;
+            case InteractionType.blockPushable:
+                
+                break;
 
         }
 

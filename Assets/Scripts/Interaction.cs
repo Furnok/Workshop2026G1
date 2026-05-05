@@ -29,5 +29,6 @@ public enum InteractionType
     killPlayer,
     teleportPlayer,
     chronoStarted,
-    ennemyFollowing
+    ennemyFollowing,
+    blockPushable,
 }
