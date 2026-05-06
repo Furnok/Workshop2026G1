@@ -4,6 +4,5 @@ public class ObjectPull : MonoBehaviour
 {
     [Header("References")]
 
-    [SerializeField] private float random;
-    
+    [SerializeField] private GameObject drawer;
 }

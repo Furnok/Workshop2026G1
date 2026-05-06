@@ -636,6 +636,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5820506593682694741}
   - component: {fileID: 7855630142863672710}
+  - component: {fileID: 463365884942049816}
+  - component: {fileID: 2725050052112662458}
+  - component: {fileID: 1473775060957452148}
   m_Layer: 0
   m_Name: tiroir_coulissant_1
   m_TagString: Untagged
@@ -652,7 +655,7 @@ Transform:
   m_GameObject: {fileID: 4595558942265934451}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.6953026, y: -1.0428429, z: 3.8846993}
+  m_LocalPosition: {x: 1.6953026, y: -1.042843, z: 3.884699}
   m_LocalScale: {x: 0.6393701, y: 0.32446504, z: 0.4073787}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -709,6 +712,71 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &463365884942049816
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4595558942265934451}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9cb040f44c51314f943ea10ea4e0570, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &2725050052112662458
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4595558942265934451}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.12, y: 0.71, z: 2.93}
+  m_Center: {x: -2.69, y: 2.07, z: -9.05}
+--- !u!114 &1473775060957452148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4595558942265934451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46147955e10b8a143ac63af4983994b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
+  objectName: 
+  interactionID: 0
+  interactions:
+  - requiredObject: 
+    type: 13
+    stringArg: open
+    length: 0
+    nextInteractionID: 0
+    playNextInteractionInstantly: 0
+  goAwayAtStart: 0
 --- !u!1 &4702772034201063283
 GameObject:
   m_ObjectHideFlags: 0
