@@ -1,7 +1,8 @@
-using UnityEngine;
+using DG.Tweening;
 using System.Collections;
-using UnityEngine.Rendering;
+using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering;
 
 public class AI_NavMeshAgent : MonoBehaviour
 {
@@ -22,10 +23,13 @@ public class AI_NavMeshAgent : MonoBehaviour
     [Header("Parameters")]
 
     [SerializeField] private float timelosingtarget;
+    [SerializeField] private float rotationTime;
     public bool isfollowing = false;
     public bool ispatroling = false;
     public bool isloosingtarget = false;
     private Coroutine stopfollowing = null;
+    private Tween rotateTween = null;
+    private Transform target = null;
 
     #endregion
     private void Awake()
@@ -37,10 +41,29 @@ public class AI_NavMeshAgent : MonoBehaviour
     {
         ispatroling = true;
     }
-    
+
+    private void Update()
+    {
+        if (isfollowing) RotateEnemy();
+    }
+
+    public void RotateEnemy()
+    {
+        if (target != null)
+        {
+            Vector3 direction = target.transform.position - transform.position;
+            direction.y = 0;
+
+            Quaternion targetRot = Quaternion.LookRotation(direction);
+
+            rotateTween?.Kill();
+            rotateTween = transform.DORotateQuaternion(targetRot, rotationTime);
+        }
+    }
+
     public void StopFollowCooldown()
     {
-        if(isloosingtarget == false && isfollowing == true)
+        if (isloosingtarget == false && isfollowing == true)
         {
             isloosingtarget = true;
 
@@ -51,6 +74,7 @@ public class AI_NavMeshAgent : MonoBehaviour
                 StopCoroutine(stopfollowing);
                 stopfollowing = null;
             }
+
             stopfollowing = StartCoroutine(TimeToLoseTarget());
         }
         
@@ -58,24 +82,30 @@ public class AI_NavMeshAgent : MonoBehaviour
 
     public void EnnemyFollowing()
     {
-        if(isfollowing == false)
+        if (isfollowing == false)
         {
             isfollowing = true;
             ispatroling = false;
             isloosingtarget = false;
         }
-            ai_NavMeshAgent.destination = player.transform.position;
+        
+        ai_NavMeshAgent.SetDestination(player.transform.position);
     }
 
     public void ColliderPerception(Collider other)
     {
-            ennemy_Perception.SetPlayer(other.transform);
+        ennemy_Perception.SetPlayer(other.transform);
+        target = other.transform;
     }
 
     public IEnumerator TimeToLoseTarget()
     {
         yield return new WaitForSeconds(timelosingtarget);
+
+        Debug.Log("Test");
+
         ai_NavMeshAgent.ResetPath();
+
         ispatroling = true;
         isfollowing = false;
         isloosingtarget = false;
