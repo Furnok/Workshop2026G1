@@ -316,7 +316,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("Pushable"))
+        if (collision.collider.CompareTag("Interactive"))
         {
 
         }

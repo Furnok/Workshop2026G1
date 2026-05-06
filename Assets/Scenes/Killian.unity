@@ -6569,9 +6569,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 850879191716358525, guid: d66fcf541365be940a0585060dff2e45, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5719403810505352614, guid: d66fcf541365be940a0585060dff2e45, type: 3}
       propertyPath: m_Name
       value: INTERACTIVEOBJECT_BlockCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719403810505352614, guid: d66fcf541365be940a0585060dff2e45, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
