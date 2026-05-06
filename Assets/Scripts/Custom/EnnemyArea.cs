@@ -14,10 +14,10 @@ public class EnnemyArea : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        /*if (other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            StartCoroutine(TimeToLoseTarget());
-            isfollowing = false;
-        }*/
+            AI_NavMeshAgent.Instance.ColliderPerception(null);
+        }
+
     }
 }

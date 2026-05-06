@@ -40,7 +40,10 @@ public class Ennemy_Perception : MonoBehaviour
         PlayerInObserveRadius = false;
         _debugBlocked = false;
 
-        if (playerTransform == null) return;
+        if (playerTransform == null)
+        {
+            return;
+        }
 
         playerposition = playerTransform.position;
         Vector3 origin = nose.position;
@@ -60,7 +63,12 @@ public class Ennemy_Perception : MonoBehaviour
 
         float angle = Vector3.Angle(nose.forward, dir);
 
-        if (angle > viewangle * 0.5) return;
+        if (angle > viewangle * 0.5 || !PlayerInObserveRadius)
+        {
+            AI_NavMeshAgent.Instance.StopFollowCooldown();
+            return; 
+        }
+            
 
         if (Physics.SphereCast(origin, viewradius, dir, out RaycastHit hit, distance, obstacle, QueryTriggerInteraction.Ignore))
         {
@@ -68,6 +76,7 @@ public class Ennemy_Perception : MonoBehaviour
             _debugHasHit = true;
             _debugHitPoint = hit.point;
             PlayerInCone = false;
+            AI_NavMeshAgent.Instance.StopFollowCooldown();
             return;
         }
 

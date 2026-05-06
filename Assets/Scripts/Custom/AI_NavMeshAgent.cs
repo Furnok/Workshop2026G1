@@ -24,6 +24,8 @@ public class AI_NavMeshAgent : MonoBehaviour
     [SerializeField] private float timelosingtarget;
     public bool isfollowing = false;
     public bool ispatroling = false;
+    public bool isloosingtarget = false;
+    private Coroutine stopfollowing = null;
 
     #endregion
     private void Awake()
@@ -35,44 +37,65 @@ public class AI_NavMeshAgent : MonoBehaviour
     {
         ispatroling = true;
     }
-    /*private void Update()
+    
+    public void StopFollowCooldown()
     {
-        EnnemyFollowing();
-    }*/
+        if(isloosingtarget == false && isfollowing == true)
+        {
+            isloosingtarget = true;
+
+            Debug.Log("LooseTarget");
+
+            if (stopfollowing != null)
+            {
+                StopCoroutine(stopfollowing);
+                stopfollowing = null;
+            }
+            stopfollowing = StartCoroutine(TimeToLoseTarget());
+        }
+        
+    }
 
     public void EnnemyFollowing()
     {
+        if(isfollowing == false)
+        {
+            isfollowing = true;
             ispatroling = false;
+            isloosingtarget = false;
+        }
             ai_NavMeshAgent.destination = player.transform.position;
     }
 
     public void ColliderPerception(Collider other)
     {
             ennemy_Perception.SetPlayer(other.transform);
-            isfollowing = true;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            ennemy_Perception.SetPlayer(other.transform);
-            isfollowing = true;
-        }
-
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            StartCoroutine(TimeToLoseTarget());
-            isfollowing = false;
-        }
     }
 
     public IEnumerator TimeToLoseTarget()
     {
         yield return new WaitForSeconds(timelosingtarget);
+        ai_NavMeshAgent.ResetPath();
+        ispatroling = true;
+        isfollowing = false;
+        isloosingtarget = false;
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            //GameManager.Instance.KillPlayer();
+            ispatroling = true ;
+            isfollowing = false ;
+            isloosingtarget = false ;
+            
+            //if (stopfollowing != null)
+            {
+                //StopCoroutine(stopfollowing);
+                //stopfollowing = null;
+            }
+
+        }
     }
 }
