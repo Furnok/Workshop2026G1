@@ -191,14 +191,14 @@ public class PlayerController : MonoBehaviour
     {
         speed = speedCrouch;
         cameraLookerTransform.DOKill();
-        cameraLookerTransform.DOMoveY(0.5f, 0.3f).SetEase(Ease.OutSine);
+        cameraLookerTransform.DOLocalMoveY(0.5f, 0.3f).SetEase(Ease.OutSine);
     }
 
     void StopCrouching()
     {
         speed = speedMax;
         cameraLookerTransform.DOKill();
-        cameraLookerTransform.DOMoveY(1.5f, 0.3f).SetEase(Ease.OutSine);
+        cameraLookerTransform.DOLocalMoveY(1.5f, 0.3f).SetEase(Ease.OutSine);
     }
 
     public void MoveUpdate()
