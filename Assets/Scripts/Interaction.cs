@@ -31,5 +31,5 @@ public enum InteractionType
     chronoStarted,
     ennemyFollowing,
     blockPushable,
-    objectPull
+    playAnimation
 }

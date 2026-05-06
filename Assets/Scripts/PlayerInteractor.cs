@@ -151,7 +151,9 @@ public class PlayerInteractor : MonoBehaviour
                 break;
             case InteractionType.blockPushable:
                 break;
-            //case InteractionType.objectPull:
+            case InteractionType.playAnimation:
+                interactiveObject.GetComponent<Animator>().SetTrigger(interaction.stringArg);
+                break;
 
         }
 
