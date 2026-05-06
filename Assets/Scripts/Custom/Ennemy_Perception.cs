@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -90,8 +91,6 @@ public class Ennemy_Perception : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        
-
         Transform eyes = nose != null ? nose : transform;
         Vector3 origin = eyes.position;
 
