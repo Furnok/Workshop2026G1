@@ -277,10 +277,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5efbcad4fff380440941f76852d09064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AI_NavMeshAgent
-  player: {fileID: 0}
   ai_NavMeshAgent: {fileID: 689202260272876842}
   ennemy_Perception: {fileID: 7473098293085869315}
   timelosingtarget: 2
+  rotationTime: 0.4
   isfollowing: 0
   ispatroling: 0
   isloosingtarget: 0

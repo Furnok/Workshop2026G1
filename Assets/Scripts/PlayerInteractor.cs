@@ -150,8 +150,8 @@ public class PlayerInteractor : MonoBehaviour
                 AI_NavMeshAgent.Instance.EnnemyFollowing();
                 break;
             case InteractionType.blockPushable:
-                
                 break;
+            //case InteractionType.objectPull:
 
         }
 
