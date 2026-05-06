@@ -359,6 +359,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6747101090456558962, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6747101090456558962, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6747101090456558962, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6796358612747199607, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
       propertyPath: m_Name
       value: AI_Nav_Mesh_Agent
@@ -3051,7 +3063,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!136 &681691758
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4814,6 +4826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1196622084}
   - component: {fileID: 1196622086}
+  - component: {fileID: 1196622087}
   - component: {fileID: 1196622085}
   m_Layer: 0
   m_Name: INTERACTIVEOBJECT_BlockCube
@@ -4876,11 +4889,38 @@ MonoBehaviour:
   interactions:
   - requiredObject: 
     type: 12
-    stringArg: Block Cube
+    stringArg: 
     length: 0
     nextInteractionID: 0
     playNextInteractionInstantly: 0
   goAwayAtStart: 0
+--- !u!54 &1196622087
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196622083}
+  serializedVersion: 5
+  m_Mass: 10
+  m_LinearDamping: 5
+  m_AngularDamping: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 112
+  m_CollisionDetection: 2
 --- !u!1 &1199459919
 GameObject:
   m_ObjectHideFlags: 0

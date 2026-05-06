@@ -29,7 +29,7 @@ public class HUD : MonoBehaviour
 
         if(PlayerInteractor.Instance.objectSelected != null)
         {
-            tm_context.text = PlayerInteractor.Instance.objectSelected.objectName;
+            //tm_context.text = PlayerInteractor.Instance.objectSelected.objectName;
         }
     }
 
