@@ -65,8 +65,6 @@ public class AI_NavMeshAgent : MonoBehaviour
         {
             isloosingtarget = true;
 
-            Debug.Log("LooseTarget");
-
             if (stopfollowing != null)
             {
                 StopCoroutine(stopfollowing);
@@ -99,8 +97,6 @@ public class AI_NavMeshAgent : MonoBehaviour
     public IEnumerator TimeToLoseTarget()
     {
         yield return new WaitForSeconds(timelosingtarget);
-
-        Debug.Log("Test");
 
         ai_NavMeshAgent.ResetPath();
 
