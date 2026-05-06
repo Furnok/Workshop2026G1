@@ -313,4 +313,17 @@ public class PlayerController : MonoBehaviour
     {
 
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag(""))
+        {
+
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        
+    }
 }
