@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4284689912199209380}
   - component: {fileID: 7032329129895140059}
   - component: {fileID: 4197700142522905767}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 6376073373940023439}
   - component: {fileID: 6626686000607743165}
   - component: {fileID: 7666825873444076985}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: INTERACTIVEOBJECT_BlockCube
   m_TagString: Interactive
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5719403810505352614}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.42, y: 0, z: -7.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
