@@ -11,8 +11,6 @@ public class AI_NavMeshAgent : MonoBehaviour
     #region References
 
     [Header("References")]
-
-    [SerializeField] private Transform player;
     [SerializeField] private NavMeshAgent ai_NavMeshAgent;
     [SerializeField] private Ennemy_Perception ennemy_Perception;
 
@@ -89,7 +87,7 @@ public class AI_NavMeshAgent : MonoBehaviour
             isloosingtarget = false;
         }
         
-        ai_NavMeshAgent.SetDestination(player.transform.position);
+        ai_NavMeshAgent.SetDestination(target.transform.position);
     }
 
     public void ColliderPerception(Collider other)
