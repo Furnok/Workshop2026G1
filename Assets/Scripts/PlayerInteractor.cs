@@ -151,8 +151,8 @@ public class PlayerInteractor : MonoBehaviour
                 break;
             case InteractionType.blockPushable:
                 break;
-            case InteractionType.playAnimation:
-                interactiveObject.GetComponent<Animator>().SetTrigger(interaction.stringArg);
+            case InteractionType.openDrawer:
+                interactiveObject.GetComponent<ObjectPull>().MaybeOpen();
                 break;
 
         }
