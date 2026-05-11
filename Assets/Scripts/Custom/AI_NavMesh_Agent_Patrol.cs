@@ -20,7 +20,7 @@ public class AI_NavMesh_Agent_Patrol : MonoBehaviour
 
     private void Update()
     {
-        if (_agent.velocity.sqrMagnitude < 1f)
+        if (!_agent.pathPending && _agent.remainingDistance <= _agent.stoppingDistance + 0.1f)
         {
             GotoNextPoint();
         }
