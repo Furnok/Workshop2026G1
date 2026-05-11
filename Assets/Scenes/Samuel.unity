@@ -5050,7 +5050,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.083333336
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: b71733170c463ce46be5c4b02f10e428, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 165b586176380614581d3c3fca2af46e, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &1574039663
 Transform:
@@ -5854,6 +5854,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 689202260272876842, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
+      propertyPath: m_Speed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1256943713025599458, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.25
@@ -5899,6 +5903,10 @@ PrefabInstance:
       value: AI_Nav_Mesh_Agent
       objectReference: {fileID: 0}
     - target: {fileID: 7375322084300006651, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
+      propertyPath: patrolPoint.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7375322084300006651, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
       propertyPath: 'patrolPoint.Array.data[0]'
       value: 
       objectReference: {fileID: 9006041270419769910}
@@ -5910,6 +5918,18 @@ PrefabInstance:
       propertyPath: 'patrolPoint.Array.data[2]'
       value: 
       objectReference: {fileID: 238350373}
+    - target: {fileID: 7375322084300006651, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
+      propertyPath: 'patrolPoint.Array.data[3]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473098293085869315, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047920169244237919, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
