@@ -49999,7 +49999,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.083333336
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: f404cea677bf46c429d8df1cb9ababa1, type: 2}
+  m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
 --- !u!4 &1794794496
 Transform:
@@ -58297,7 +58297,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 689202260272876842, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
       propertyPath: m_Speed
-      value: 3
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1256943713025599458, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -58914,87 +58914,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!1001 &2111727127
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 689202260272876842, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
-      propertyPath: m_Speed
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256943713025599458, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 12.33901
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256943713025599458, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.00000055348426
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256943713025599458, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.9497886
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256943713025599458, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256943713025599458, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256943713025599458, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256943713025599458, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256943713025599458, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256943713025599458, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256943713025599458, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6796358612747199607, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
-      propertyPath: m_Name
-      value: AI_Nav_Mesh_Agent
-      objectReference: {fileID: 0}
-    - target: {fileID: 7375322084300006651, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
-      propertyPath: 'patrolPoint.Array.data[0]'
-      value: 
-      objectReference: {fileID: 782976602}
-    - target: {fileID: 7375322084300006651, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
-      propertyPath: 'patrolPoint.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2035167858}
-    - target: {fileID: 7375322084300006651, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
-      propertyPath: 'patrolPoint.Array.data[2]'
-      value: 
-      objectReference: {fileID: 1702672416}
-    - target: {fileID: 7375322084300006651, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
-      propertyPath: 'patrolPoint.Array.data[3]'
-      value: 
-      objectReference: {fileID: 1426115973}
-    - target: {fileID: 7375322084300006651, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
-      propertyPath: 'patrolPoint.Array.data[4]'
-      value: 
-      objectReference: {fileID: 335059289}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
 --- !u!43 &2121376045
 Mesh:
   m_ObjectHideFlags: 0
@@ -59654,7 +59573,7 @@ SceneRoots:
   - {fileID: 517088791}
   - {fileID: 877799871}
   - {fileID: 1794794496}
-  - {fileID: 2111727127}
+  - {fileID: 2098512613}
   - {fileID: 513464450}
   - {fileID: 1685969575}
   - {fileID: 1410172648}
@@ -59664,5 +59583,4 @@ SceneRoots:
   - {fileID: 1702672415}
   - {fileID: 1426115972}
   - {fileID: 335059288}
-  - {fileID: 2098512613}
   - {fileID: 442578748}
