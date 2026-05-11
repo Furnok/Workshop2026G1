@@ -214,6 +214,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1256943713025599458}
+  - component: {fileID: 7375322084300006651}
   - component: {fileID: 7473098293085869315}
   - component: {fileID: 8047920169244237919}
   - component: {fileID: 689202260272876842}
@@ -241,7 +242,7 @@ Transform:
   - {fileID: 6747101090456558962}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7473098293085869315
+--- !u!114 &7375322084300006651
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -249,6 +250,24 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6796358612747199607}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c187f936be2b3974696738c8ee8ae2d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AI_NavMesh_Agent_Patrol
+  _agent: {fileID: 689202260272876842}
+  patrolPoint:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  positionPoint: 0
+--- !u!114 &7473098293085869315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6796358612747199607}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65bef3d57d1f42f45bc27bd25b427d69, type: 3}
   m_Name: 
@@ -272,7 +291,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6796358612747199607}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5efbcad4fff380440941f76852d09064, type: 3}
   m_Name: 
@@ -294,7 +313,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 2
+  m_Speed: 15
   m_Acceleration: 1500
   avoidancePriority: 50
   m_AngularSpeed: 1500
