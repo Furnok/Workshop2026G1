@@ -4074,7 +4074,7 @@ Transform:
   m_GameObject: {fileID: 681691754}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.8, y: 0.01, z: -23.8}
+  m_LocalPosition: {x: 46.09, y: 0.01, z: -38.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10142,6 +10142,10 @@ PrefabInstance:
     - target: {fileID: 6796358612747199607, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
       propertyPath: m_Name
       value: AI_Nav_Mesh_Agent (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6796358612747199607, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7375322084300006651, guid: dfed11c90c600ba4facfa51f35d5d3e2, type: 3}
       propertyPath: patrolPoint.Array.size
