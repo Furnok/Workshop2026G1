@@ -35077,8 +35077,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2512948283956461023, guid: bcdccf0cd9148b548b475964e5935f60, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 2512948283956461023, guid: bcdccf0cd9148b548b475964e5935f60, type: 3}
       propertyPath: m_Name
       value: PositionPoint (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512948283956461023, guid: bcdccf0cd9148b548b475964e5935f60, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5721955130700250458, guid: bcdccf0cd9148b548b475964e5935f60, type: 3}
       propertyPath: m_LocalPosition.x
